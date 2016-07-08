@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/res/merged/debug/color/common_signin_btn_text_light.xml",
+        "source": "/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/color/common_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/res/merged/debug/color/common_signin_btn_text_dark.xml",
+        "source": "/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/res/color/common_signin_btn_text_dark.xml"
+    }
+]

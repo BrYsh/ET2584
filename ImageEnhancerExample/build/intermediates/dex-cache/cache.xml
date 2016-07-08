@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-appindexing-8.1.0_dd4cefa22bbabfdde2f30f7a39d47d06dc9d7181.jar" />
+    </item>
+    <item
+        jar="/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/pre-dexed/release/com.android.support-support-v4-22.2.0_a1fe70cc9190f9bb52fe490945ab429e932be79e.jar" />
+    </item>
+    <item
+        jar="/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/pre-dexed/release/internal_impl-22.2.0_4847893105d6155ca7c1afb3116a3edd999067b4.jar" />
+    </item>
+    <item
+        jar="/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/pre-dexed/release/com.google.android.gms-play-services-basement-8.1.0_5569992021a39d19a31a94cb96f141dce46059e0.jar" />
+    </item>
+    <item
+        jar="/Users/Andreas/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/pre-dexed/release/support-annotations-22.2.0_11d9d5713113c2e1fa92171d7f2c72de0e407fb3.jar" />
+    </item>
+
+</items>
