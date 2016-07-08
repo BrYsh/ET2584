@@ -26,6 +26,13 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.ViewGroup;
+import android.widget.SeekBar;
+import android.widget.TextView;
+//import android.app.Activity;
+
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -36,10 +43,20 @@ public class MainActivity extends FragmentActivity {
 	private ImageView beforeImageView, afterImageView;
 	private Bitmap theImage;
 	private Button loadButton;
-	private Button improveButton;
-	private ImageEnhancer selectedEnhancer;
+	//private Button improveButton;
+	private Button zButton;
+	private Button bwButton;
+	private Button vButton;
+	private Button alButton;
+	private Button histButton;
+	private Button almButton;
+	private Button lButton;
+	private ImageEnhancer selectedEnhancer; // <-- Ska stå i klassen
 	private int selectedConfiguration;
 	private ProgressDialog progressDialog;
+
+
+
 	/**
 	 * ATTENTION: This was auto-generated to implement the App Indexing API.
 	 * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -50,7 +67,7 @@ public class MainActivity extends FragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		selectedEnhancer = getEnhancers().get(0); // Here we choose which enhancer to use
+		selectedEnhancer = getEnhancers().get(1); // Here we choose which enhancer to use
 
 		//// print how much memory the app is allowed to use on this device
 		Runtime rt = Runtime.getRuntime();
@@ -59,8 +76,22 @@ public class MainActivity extends FragmentActivity {
 		//////////////////////////////////
 
 		loadButton = (Button) findViewById(R.id.load_button);
-		improveButton = (Button) findViewById(R.id.improve_button);
-		improveButton.setVisibility(View.INVISIBLE);
+		//improveButton = (Button) findViewById(R.id.improve_button);
+		zButton = (Button) findViewById(R.id.z_button);
+		bwButton = (Button) findViewById(R.id.bw_button);
+		vButton = (Button) findViewById(R.id.v_button);
+		alButton = (Button) findViewById(R.id.al_button);
+		histButton = (Button) findViewById(R.id.hist_button);
+		almButton = (Button) findViewById(R.id.aml_button);
+		lButton = (Button) findViewById(R.id.l_button);
+		//improveButton.setVisibility(View.INVISIBLE);
+		zButton.setVisibility(View.INVISIBLE);
+		bwButton.setVisibility(View.INVISIBLE);
+		vButton.setVisibility(View.INVISIBLE);
+		alButton.setVisibility(View.INVISIBLE);
+		histButton.setVisibility(View.INVISIBLE);
+		almButton.setVisibility(View.INVISIBLE);
+		lButton.setVisibility(View.INVISIBLE);
 
 		beforeImageView = (ImageView) findViewById(R.id.imageview1);
 		afterImageView = (ImageView) findViewById(R.id.imageview2);
@@ -78,6 +109,8 @@ public class MainActivity extends FragmentActivity {
 				Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
 				intent.setType("image/*");
 				startActivityForResult(Intent.createChooser(intent, "Zelect image:"), SELECT_IMAGE);
+				zButton.setVisibility(View.INVISIBLE);
+				afterImageView.setVisibility(View.INVISIBLE);
 
 			}
 		});
@@ -86,20 +119,125 @@ public class MainActivity extends FragmentActivity {
 
 			@Override
 			public void onClick(View v) {
-				if (loadButton.getVisibility() == View.VISIBLE)
-					loadButton.setVisibility(View.INVISIBLE);
-				else
-					loadButton.setVisibility(View.VISIBLE);
+//				if (loadButton.getVisibility() == View.VISIBLE)
+//					loadButton.setVisibility(View.INVISIBLE);
+//				else
+//					loadButton.setVisibility(View.VISIBLE);
 
 			}
 		});
 
-		improveButton.setOnClickListener(new OnClickListener() {
+//		improveButton.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				selectedEnhancer = getEnhancers().get(0);
+//				FragmentManager fm = getSupportFragmentManager();
+//				new ConfigurationDialog().show(fm, "configuration_dialog");
+//				afterImageView.setVisibility(View.VISIBLE);
+//				zButton.setVisibility(View.VISIBLE);
+//			}
+//		});
+
+		zButton.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				FragmentManager fm = getSupportFragmentManager();
-				new ConfigurationDialog().show(fm, "configuration_dialog");
+				if( afterImageView.getVisibility() == View.VISIBLE ){
+					afterImageView.setVisibility(View.INVISIBLE);
+				}
+				else {
+					afterImageView.setVisibility(View.VISIBLE);
+				}
+			}
+		});
+
+		bwButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				selectedEnhancer = getEnhancers().get(1);
+
+				// Vad som behöver ändras här ifrån
+				selectedConfiguration = 0;
+				progressDialog.setProgress(0);
+				progressDialog.show();
+				new ImproveImageTask().execute(theImage);
+
+				afterImageView.setVisibility(View.VISIBLE);
+				zButton.setVisibility(View.VISIBLE);
+
+			}
+		});
+
+		vButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				selectedEnhancer = getEnhancers().get(2);
+
+				binsDialog(0);
+				afterImageView.setVisibility(View.VISIBLE);
+				zButton.setVisibility(View.VISIBLE);
+
+			}
+		});
+
+		alButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				selectedEnhancer = getEnhancers().get(3);
+
+				selectedConfiguration = 30;
+				progressDialog.setProgress(0);
+				progressDialog.show();
+				new ImproveImageTask().execute(theImage);
+				afterImageView.setVisibility(View.VISIBLE);
+				zButton.setVisibility(View.VISIBLE);
+
+			}
+		});
+
+		histButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				selectedEnhancer = getEnhancers().get(6);
+
+				selectedConfiguration = 30;
+				progressDialog.setProgress(0);
+				progressDialog.show();
+				new ImproveImageTask().execute(theImage);
+				afterImageView.setVisibility(View.VISIBLE);
+				zButton.setVisibility(View.VISIBLE);
+
+			}
+		});
+
+		almButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				selectedEnhancer = getEnhancers().get(5);
+
+				almDialog();
+				afterImageView.setVisibility(View.VISIBLE);
+				zButton.setVisibility(View.VISIBLE);
+
+			}
+		});
+
+		lButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				selectedEnhancer = getEnhancers().get(4);
+
+				levelsDialog();
+				afterImageView.setVisibility(View.VISIBLE);
+				zButton.setVisibility(View.VISIBLE);
+
 			}
 		});
 
@@ -107,10 +245,10 @@ public class MainActivity extends FragmentActivity {
 
 			@Override
 			public void onClick(View v) {
-				if (improveButton.getVisibility() == View.VISIBLE)
-					improveButton.setVisibility(View.INVISIBLE);
-				else
-					improveButton.setVisibility(View.VISIBLE);
+//				if (improveButton.getVisibility() == View.VISIBLE)
+//					improveButton.setVisibility(View.INVISIBLE);
+//				else
+//					improveButton.setVisibility(View.VISIBLE);
 
 			}
 		});
@@ -139,20 +277,32 @@ public class MainActivity extends FragmentActivity {
 				int activityHeight = getWindow().getDecorView().getHeight() - getStatusBarHeight();
 				int width;
 				int height;
+
+
+				// Ändras hur bilden visas i appen
 				if (theImage.getWidth() > theImage.getHeight()) { // Landscape
 					width = activityWidth;
 					height = theImage.getHeight() * width / theImage.getWidth(); //Keep aspect ratio
 				} else {
-					height = activityHeight / 2;
+					height = activityHeight*3 / 4;
 					width = theImage.getWidth() * height / theImage.getHeight();
 				}
+
 				Log.d("DEBUG", "creating scaled BITMAP,width x height " + width + " " + height);
 				theImage = Bitmap.createScaledBitmap(theImage, width,
 						height, false);
+
+
 				parcelFileDescriptor.close();
 				beforeImageView.setImageBitmap(theImage);
-				improveButton.setVisibility(View.VISIBLE);
-				loadButton.setVisibility(View.INVISIBLE);  //Hide the loadButton to not obscure the original pic.
+				//improveButton.setVisibility(View.VISIBLE);
+				bwButton.setVisibility(View.VISIBLE);
+				vButton.setVisibility(View.VISIBLE);
+				alButton.setVisibility(View.VISIBLE);
+				histButton.setVisibility(View.VISIBLE);
+				almButton.setVisibility(View.VISIBLE);
+				lButton.setVisibility(View.VISIBLE);
+				//loadButton.setVisibility(View.INVISIBLE);  //Hide the loadButton to not obscure the original pic.
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -254,27 +404,317 @@ public class MainActivity extends FragmentActivity {
 		ArrayList<ImageEnhancer> enhancers = new ArrayList<ImageEnhancer>();
 
 		enhancers.add(new TestEnhancer()); // Here below additional enhancers can be added
+		enhancers.add(new BwEnhancer());
+		enhancers.add(new VEnhancer());
+		enhancers.add(new AlevelsEnhancer());
+		enhancers.add(new LevelsEnhancer());
+		enhancers.add(new AMlevelsEnhancer());
+		enhancers.add(new HisteqEnhancer());
 		return enhancers;
 	}
 
-	public class ConfigurationDialog extends DialogFragment {
+//	public class ConfigurationDialog extends DialogFragment {
+//
+//		@Override
+//		public Dialog onCreateDialog(Bundle savedInstanceState) {
+//			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+//			builder.setTitle(R.string.select_configuration).setItems(
+//					selectedEnhancer.getConfigurationOptions(),
+//					new DialogInterface.OnClickListener() {
+//						public void onClick(DialogInterface dialog, int which) { // << Här ändras popupen?!?!?!
+//							selectedConfiguration = which;
+//							progressDialog.setProgress(0);
+//							progressDialog.show();
+//							new ImproveImageTask().execute(theImage);
+//
+//						}
+//					});
+//			return builder.create();
+//		}
+//	}
 
-		@Override
-		public Dialog onCreateDialog(Bundle savedInstanceState) {
-			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-			builder.setTitle(R.string.select_configuration).setItems(
-					selectedEnhancer.getConfigurationOptions(),
-					new DialogInterface.OnClickListener() {
-						public void onClick(DialogInterface dialog, int which) {
-							selectedConfiguration = which;
-							progressDialog.setProgress(0);
-							progressDialog.show();
-							new ImproveImageTask().execute(theImage);
+	//seekbar för levels(2)
+	public void levelsDialog(){
 
+		final AlertDialog.Builder popDialog = new AlertDialog.Builder(this);
+		final LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
+
+		final View Viewlayout = inflater.inflate(R.layout.levels_dialog,
+				(ViewGroup) findViewById(R.id.l_dialog));
+
+		final TextView item1 = (TextView)Viewlayout.findViewById(R.id.l1_txt); // txtItem1
+		final TextView item2 = (TextView)Viewlayout.findViewById(R.id.l2_txt); // txtItem1
+		final TextView item3 = (TextView)Viewlayout.findViewById(R.id.l3_txt); // txtItem1
+		item1.setText("lv: " + 0);
+		item3.setText("hv: " + 255);
+		item2.setText("gamma: " + 1);
+		//popDialog.setIcon(android.R.drawable.btn_star_big_on);
+		popDialog.setTitle("Select Saturation");
+		popDialog.setView(Viewlayout);
+
+		//  seekBar1
+		final SeekBar seek1 = (SeekBar) Viewlayout.findViewById(R.id.l1_seekBar);
+		final SeekBar seek2 = (SeekBar) Viewlayout.findViewById(R.id.l2_seekBar);
+		final SeekBar seek3 = (SeekBar) Viewlayout.findViewById(R.id.l3_seekBar);
+		seek1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
+				//Do something here with new value
+
+				if(progress >= seek3.getProgress()){
+					seek1.setProgress(seek3.getProgress()-1);
+					progress = seek3.getProgress()-1;
+				}
+				item1.setText("lv: " + progress);
+			}
+
+			public void onStartTrackingTouch(SeekBar arg0) {
+				// TODO Auto-generated method stub
+
+			}
+
+			public void onStopTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+
+			}
+
+		});
+
+		//  seekBar1
+
+		seek2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
+				//Do something here with new value
+				double show = 0;
+				if(progress+1 <= 32) {
+					show = (double) (progress+1) / 32.0;
+				}
+				else{
+					show = progress-31;
+				}
+				item2.setText("gamma: " + show);
+			}
+
+			public void onStartTrackingTouch(SeekBar arg0) {
+				// TODO Auto-generated method stub
+
+			}
+
+			public void onStopTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+
+			}
+
+		});
+
+
+		seek3.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
+				//Do something here with new value
+				if(progress <= seek1.getProgress()){
+					seek3.setProgress(seek1.getProgress()+1);
+					progress = seek1.getProgress()+1;
+				}
+				item3.setText("hv: " + progress);
+			}
+
+			public void onStartTrackingTouch(SeekBar arg0) {
+				// TODO Auto-generated method stub
+
+			}
+
+			public void onStopTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+
+			}
+
+		});
+
+
+		// Button OK
+		popDialog.setPositiveButton("OK",
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+						int lv =  + seek1.getProgress();
+						int hv =  + seek3.getProgress();
+						int gamma_i =  seek2.getProgress();
+						float gamma=0;
+						if(gamma_i+1 <= 32) {
+							gamma = (float) (gamma_i+1) / (float)32;
 						}
-					});
-			return builder.create();
-		}
+						else{
+							gamma = gamma_i-31;
+						}
+
+						Log.d("DEBUG", "levels: lv = " + lv);
+						Log.d("DEBUG", "levels: hv = " + hv);
+						Log.d("DEBUG", "levels: gamma = " + gamma);
+
+						if(gamma >= 1){
+							gamma_i = (100 + (int)gamma)*1000000;
+						}
+						else{
+							gamma_i = ((int)(gamma*100))*1000000;
+						}
+
+
+						int send = lv + (hv*1000) + gamma_i;
+						Log.d("DEBUG", "levels: send = " + send);
+						selectedConfiguration = send;
+						progressDialog.setProgress(0);
+						progressDialog.show();
+						new ImproveImageTask().execute(theImage);
+					}
+
+				});
+
+
+		popDialog.create();
+		popDialog.show();
+
 	}
+
+	//Seekbar för V-trans(1)
+	public void binsDialog(int mode){
+
+		final int mode_inner = mode;
+		final AlertDialog.Builder popDialog = new AlertDialog.Builder(this);
+		final LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
+
+		final View Viewlayout = inflater.inflate(R.layout.activity_dialog,
+				(ViewGroup) findViewById(R.id.v_dialog));
+
+		final TextView item1 = (TextView)Viewlayout.findViewById(R.id.v_txt); // txtItem1
+		item1.setText("Value of : " + 1);
+		//popDialog.setIcon(android.R.drawable.btn_star_big_on);
+		popDialog.setTitle("Select number of bins ");
+		popDialog.setView(Viewlayout);
+
+		//  seekBar1
+		final SeekBar seek1 = (SeekBar) Viewlayout.findViewById(R.id.v_seekBar);
+		if(mode > 0){
+		seek1.setMax(50);
+		}
+		seek1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
+				//Do something here with new value
+				item1.setText("Bins : " + progress);
+			}
+
+			public void onStartTrackingTouch(SeekBar arg0) {
+				// TODO Auto-generated method stub
+
+			}
+
+			public void onStopTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+
+			}
+
+		});
+
+
+		// Button OK
+		popDialog.setPositiveButton("OK",
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+						int bins = 1 + seek1.getProgress() + mode_inner;
+						selectedConfiguration = bins;
+						progressDialog.setProgress(0);
+						progressDialog.show();
+						new ImproveImageTask().execute(theImage);
+						Log.d("DEBUG", "V-TRANSFORMATION BINS = " + bins);
+					}
+
+				});
+
+
+		popDialog.create();
+		popDialog.show();
+
+	}
+
+	//Seekbar för V-trans(1)
+	public void almDialog(){
+
+		final AlertDialog.Builder popDialog = new AlertDialog.Builder(this);
+		final LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
+
+		final View Viewlayout = inflater.inflate(R.layout.amlevels_dialog,
+				(ViewGroup) findViewById(R.id.aml_dialog));
+
+		final TextView item1 = (TextView)Viewlayout.findViewById(R.id.aml_txt); // txtItem1
+		item1.setText("gamma : " + 1);
+		//popDialog.setIcon(android.R.drawable.btn_star_big_on);
+		popDialog.setTitle("Select gamma ");
+		popDialog.setView(Viewlayout);
+
+		//  seekBar1
+		final SeekBar seek1 = (SeekBar) Viewlayout.findViewById(R.id.aml_seekBar);
+		seek1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
+				//Do something here with new value
+				double show = 0;
+				if(progress+1 <= 32) {
+					show = (double) (progress+1) / 32.0;
+				}
+				else{
+					show = progress-31;
+				}
+				item1.setText("gamma: " + show);
+			}
+
+			public void onStartTrackingTouch(SeekBar arg0) {
+				// TODO Auto-generated method stub
+
+			}
+
+			public void onStopTrackingTouch(SeekBar seekBar) {
+				// TODO Auto-generated method stub
+
+			}
+
+		});
+
+
+		// Button OK
+		popDialog.setPositiveButton("OK",
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+						dialog.dismiss();
+						float gamma =0;
+						int gamma_i = seek1.getProgress();
+						if(gamma_i+1 <= 32) {
+							gamma = (float) (gamma_i+1) / (float)32;
+						}
+						else{
+							gamma = gamma_i-31;
+						}
+
+						gamma_i = (int)(gamma*100);
+						selectedConfiguration = gamma_i;
+						progressDialog.setProgress(0);
+						progressDialog.show();
+						new ImproveImageTask().execute(theImage);
+						Log.d("DEBUG", "V-TRANSFORMATION BINS = " + gamma_i);
+					}
+
+				});
+
+
+		popDialog.create();
+		popDialog.show();
+
+	}
+
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu) {
+//		//getMenuInflater().inflate(R.menu.activity_main, menu);
+//		return true;
+//
+//
+//	}
+
 
 }

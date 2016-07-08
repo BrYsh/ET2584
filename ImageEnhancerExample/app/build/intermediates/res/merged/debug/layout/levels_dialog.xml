@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/l_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!--<ImageView-->
+        <!--android:id="@+id/hist"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:contentDescription="@string/before_image"/>-->
+
+    <TextView
+        android:id="@+id/l1_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp" />
+
+    <SeekBar
+        android:id="@+id/l1_seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:max="254" />
+
+    <TextView
+        android:id="@+id/l2_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/l3_seekBar"
+        android:layout_marginTop="95dp" />
+
+    <SeekBar
+        android:id="@+id/l2_seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/l2_txt"
+        android:layout_marginTop="0dp"
+        android:max="63"
+        android:progress="31" />
+
+    <TextView
+        android:id="@+id/l3_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/l1_seekBar"
+        android:layout_marginTop="40dp" />
+
+    <SeekBar
+        android:id="@+id/l3_seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/l3_txt"
+        android:layout_marginTop="0dp"
+        android:max="255"
+        android:progress="255" />
+
+
+</RelativeLayout>

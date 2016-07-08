@@ -1,0 +1,1 @@
+CHANGED,/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/softa/imageenhancer/MainActivity.class

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/build/intermediates/res/merged/release/values-v14/values-v14.xml",
+        "outputFile": "/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/intermediates/res/merged/release/values-v14/values-v14.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 125
                 },
                 "from": {
-                    "file": "/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ImageEnhancerExample/app/src/main/res/values-v14/styles.xml",
+                    "file": "/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/src/main/res/values-v14/styles.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

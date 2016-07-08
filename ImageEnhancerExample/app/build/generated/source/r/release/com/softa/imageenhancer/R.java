@@ -39,18 +39,19 @@ containing a value of this type.
         public static final int imageAspectRatioAdjust=0x7f010000;
     }
     public static final class color {
-        public static final int common_action_bar_splitter=0x7f060000;
-        public static final int common_signin_btn_dark_text_default=0x7f060001;
-        public static final int common_signin_btn_dark_text_disabled=0x7f060002;
-        public static final int common_signin_btn_dark_text_focused=0x7f060003;
-        public static final int common_signin_btn_dark_text_pressed=0x7f060004;
-        public static final int common_signin_btn_default_background=0x7f060005;
-        public static final int common_signin_btn_light_text_default=0x7f060006;
-        public static final int common_signin_btn_light_text_disabled=0x7f060007;
-        public static final int common_signin_btn_light_text_focused=0x7f060008;
-        public static final int common_signin_btn_light_text_pressed=0x7f060009;
-        public static final int common_signin_btn_text_dark=0x7f06000a;
-        public static final int common_signin_btn_text_light=0x7f06000b;
+        public static final int black=0x7f060000;
+        public static final int common_action_bar_splitter=0x7f060001;
+        public static final int common_signin_btn_dark_text_default=0x7f060002;
+        public static final int common_signin_btn_dark_text_disabled=0x7f060003;
+        public static final int common_signin_btn_dark_text_focused=0x7f060004;
+        public static final int common_signin_btn_dark_text_pressed=0x7f060005;
+        public static final int common_signin_btn_default_background=0x7f060006;
+        public static final int common_signin_btn_light_text_default=0x7f060007;
+        public static final int common_signin_btn_light_text_disabled=0x7f060008;
+        public static final int common_signin_btn_light_text_focused=0x7f060009;
+        public static final int common_signin_btn_light_text_pressed=0x7f06000a;
+        public static final int common_signin_btn_text_dark=0x7f06000b;
+        public static final int common_signin_btn_text_light=0x7f06000c;
     }
     public static final class dimen {
         public static final int add_button_margin=0x7f070000;
@@ -66,24 +67,49 @@ containing a value of this type.
     public static final class id {
         public static final int adjust_height=0x7f090000;
         public static final int adjust_width=0x7f090001;
-        public static final int imageview1=0x7f090003;
-        public static final int imageview2=0x7f090004;
-        public static final int improve_button=0x7f090005;
-        public static final int load_button=0x7f090006;
+        public static final int al_button=0x7f09000c;
+        public static final int aml_button=0x7f09000e;
+        public static final int aml_dialog=0x7f090010;
+        public static final int aml_seekBar=0x7f090012;
+        public static final int aml_txt=0x7f090011;
+        public static final int bw_button=0x7f09000a;
+        public static final int hist_button=0x7f09000f;
+        public static final int imageview1=0x7f090006;
+        public static final int imageview2=0x7f090007;
+        public static final int l1_seekBar=0x7f090015;
+        public static final int l1_txt=0x7f090014;
+        public static final int l2_seekBar=0x7f090018;
+        public static final int l2_txt=0x7f090016;
+        public static final int l3_seekBar=0x7f090017;
+        public static final int l3_txt=0x7f090019;
+        public static final int l_button=0x7f09000d;
+        public static final int l_dialog=0x7f090013;
+        public static final int load_button=0x7f090008;
         public static final int none=0x7f090002;
+        public static final int v_button=0x7f09000b;
+        public static final int v_dialog=0x7f090003;
+        public static final int v_seekBar=0x7f090005;
+        public static final int v_txt=0x7f090004;
+        public static final int z_button=0x7f090009;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f080000;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
+        public static final int activity_dialog=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int amlevels_dialog=0x7f030002;
+        public static final int levels_dialog=0x7f030003;
     }
     public static final class string {
         public static final int after_image=0x7f04001e;
-        public static final int app_name=0x7f04001f;
-        public static final int auth_google_play_services_client_facebook_display_name=0x7f040020;
-        public static final int auth_google_play_services_client_google_display_name=0x7f040021;
-        public static final int before_image=0x7f040022;
+        public static final int al_button_text=0x7f04001f;
+        public static final int aml_button_text=0x7f040020;
+        public static final int app_name=0x7f040021;
+        public static final int auth_google_play_services_client_facebook_display_name=0x7f040022;
+        public static final int auth_google_play_services_client_google_display_name=0x7f040023;
+        public static final int before_image=0x7f040024;
+        public static final int bw_button_text=0x7f040025;
         public static final int common_android_wear_notification_needs_update_text=0x7f040000;
         public static final int common_android_wear_update_text=0x7f040001;
         public static final int common_android_wear_update_title=0x7f040002;
@@ -114,10 +140,13 @@ containing a value of this type.
         public static final int common_google_play_services_updating_text=0x7f04001b;
         public static final int common_google_play_services_updating_title=0x7f04001c;
         public static final int common_open_on_phone=0x7f04001d;
-        public static final int improve_image_text=0x7f040023;
-        public static final int load_button_text=0x7f040024;
-        public static final int select_configuration=0x7f040025;
-        public static final int title_activity_main=0x7f040026;
+        public static final int hist_button_text=0x7f040026;
+        public static final int l_button_text=0x7f040027;
+        public static final int load_button_text=0x7f040028;
+        public static final int select_configuration=0x7f040029;
+        public static final int title_activity_main=0x7f04002a;
+        public static final int v_button_text=0x7f04002b;
+        public static final int z_button_text=0x7f04002c;
     }
     public static final class style {
         public static final int AppTheme=0x7f050000;

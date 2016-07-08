@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <color name="black">#000000</color>
     <color name="common_action_bar_splitter">#d2d2d2</color>
     <color name="common_signin_btn_dark_text_default">@android:color/white</color>
     <color name="common_signin_btn_dark_text_disabled">#FFAAAAAA</color>
@@ -15,10 +16,13 @@
     <dimen name="round_button_diameter">48dp</dimen>
     <integer name="google_play_services_version">8115000</integer>
     <string name="after_image">After image</string>
+    <string name="al_button_text">A levels</string>
+    <string name="aml_button_text">AM levels</string>
     <string name="app_name">ImageEnhancer</string>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
     <string name="before_image">Before image</string>
+    <string name="bw_button_text">BW</string>
     <string name="common_android_wear_notification_needs_update_text"><ns1:g id="app_name">%1$s</ns1:g> requires an update to the Android Wear app.</string>
     <string name="common_android_wear_update_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run unless you update the Android Wear app.</string>
     <string msgid="6006316683626838685" name="common_android_wear_update_title">Update Android Wear</string>
@@ -49,9 +53,12 @@
     <string name="common_google_play_services_updating_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are currently updating.</string>
     <string name="common_google_play_services_updating_title">Google Play services are updating</string>
     <string name="common_open_on_phone">Open on phone</string>
-    <string name="improve_image_text">Modify image</string>
-    <string name="load_button_text">Load new image</string>
+    <string name="hist_button_text">Hist EQ</string>
+    <string name="l_button_text">levels</string>
+    <string name="load_button_text">Load</string>
     <string name="select_configuration">Select configuration</string>
     <string name="title_activity_main">ImageEnhancer</string>
+    <string name="v_button_text">V</string>
+    <string name="z_button_text">ctrl-z</string>
     <style name="AppTheme" parent="android:Theme.NoTitleBar.Fullscreen"/>
 </resources>

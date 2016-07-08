@@ -1,11 +1,18 @@
 <resources>
 
     <string name="app_name">ImageEnhancer</string>
-    <string name="load_button_text">Load new image</string>
-    <string name="improve_image_text">Modify image</string>
+    <string name="load_button_text">Load</string>
+    <string name="z_button_text">ctrl-z</string>
+    <string name="bw_button_text">BW</string>
+    <string name="v_button_text">V</string>
+    <string name="al_button_text">A levels</string>
+    <string name="l_button_text">levels</string>
+    <string name="aml_button_text">AM levels</string>
+    <string name="hist_button_text">Hist EQ</string>
     <string name="title_activity_main">ImageEnhancer</string>
     <string name="before_image">Before image</string>
     <string name="after_image">After image</string>
     <string name="select_configuration">Select configuration</string>
+    <color name="black">#000000</color>
 
 </resources>
