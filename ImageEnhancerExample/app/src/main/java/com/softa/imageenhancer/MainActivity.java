@@ -55,6 +55,9 @@ public class MainActivity extends FragmentActivity {
 	private int selectedConfiguration;
 	private ProgressDialog progressDialog;
 
+	int gamma_aml = 31, gamma_l = 31,lv_l = 0,hv_l = 255,bins_v = 0;
+
+
 
 
 	/**
@@ -111,6 +114,11 @@ public class MainActivity extends FragmentActivity {
 				startActivityForResult(Intent.createChooser(intent, "Zelect image:"), SELECT_IMAGE);
 				zButton.setVisibility(View.INVISIBLE);
 				afterImageView.setVisibility(View.INVISIBLE);
+				gamma_aml = 31;
+				gamma_l = 31;
+				hv_l = 255;
+				lv_l = 0;
+				bins_v = 0;
 
 			}
 		});
@@ -445,17 +453,31 @@ public class MainActivity extends FragmentActivity {
 		final TextView item1 = (TextView)Viewlayout.findViewById(R.id.l1_txt); // txtItem1
 		final TextView item2 = (TextView)Viewlayout.findViewById(R.id.l2_txt); // txtItem1
 		final TextView item3 = (TextView)Viewlayout.findViewById(R.id.l3_txt); // txtItem1
-		item1.setText("lv: " + 0);
-		item3.setText("hv: " + 255);
-		item2.setText("gamma: " + 1);
+
+		item1.setText("lv: " + lv_l);
+		item3.setText("hv: " + hv_l);
 		//popDialog.setIcon(android.R.drawable.btn_star_big_on);
 		popDialog.setTitle("Select Saturation");
 		popDialog.setView(Viewlayout);
 
-		//  seekBar1
-		final SeekBar seek1 = (SeekBar) Viewlayout.findViewById(R.id.l1_seekBar);
-		final SeekBar seek2 = (SeekBar) Viewlayout.findViewById(R.id.l2_seekBar);
-		final SeekBar seek3 = (SeekBar) Viewlayout.findViewById(R.id.l3_seekBar);
+		//  seekBar
+		final SeekBar seek1 = (SeekBar) Viewlayout.findViewById(R.id.l1_seekBar); //lv
+		final SeekBar seek2 = (SeekBar) Viewlayout.findViewById(R.id.l2_seekBar); //gamma
+		final SeekBar seek3 = (SeekBar) Viewlayout.findViewById(R.id.l3_seekBar); //hv
+
+		seek1.setProgress(lv_l);
+		seek2.setProgress(gamma_l);
+		seek3.setProgress(hv_l);
+
+		double show = 0;
+		if(gamma_l+1 <= 32) {
+			show = (double) (gamma_l+1) / 32.0;
+		}
+		else{
+			show = (Math.round(((gamma_l-28.0)/3.0)*100.0))/100.0;
+		}
+		item2.setText("gamma: " + show);
+
 		seek1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
 				//Do something here with new value
@@ -489,7 +511,7 @@ public class MainActivity extends FragmentActivity {
 					show = (double) (progress+1) / 32.0;
 				}
 				else{
-					show = progress-31;
+					show = (Math.round(((progress-28.0)/3.0)*100.0))/100.0;
 				}
 				item2.setText("gamma: " + show);
 			}
@@ -543,7 +565,7 @@ public class MainActivity extends FragmentActivity {
 							gamma = (float) (gamma_i+1) / (float)32;
 						}
 						else{
-							gamma = gamma_i-31;
+							gamma = (float)(gamma_i-28.0)/(float)3;
 						}
 
 						Log.d("DEBUG", "levels: lv = " + lv);
@@ -564,6 +586,9 @@ public class MainActivity extends FragmentActivity {
 						progressDialog.setProgress(0);
 						progressDialog.show();
 						new ImproveImageTask().execute(theImage);
+						lv_l = seek1.getProgress();
+						gamma_l = seek2.getProgress();
+						hv_l = seek3.getProgress();
 					}
 
 				});
@@ -585,20 +610,21 @@ public class MainActivity extends FragmentActivity {
 				(ViewGroup) findViewById(R.id.v_dialog));
 
 		final TextView item1 = (TextView)Viewlayout.findViewById(R.id.v_txt); // txtItem1
-		item1.setText("Value of : " + 1);
+		item1.setText("Value of : " + (bins_v+1));
 		//popDialog.setIcon(android.R.drawable.btn_star_big_on);
 		popDialog.setTitle("Select number of bins ");
 		popDialog.setView(Viewlayout);
 
 		//  seekBar1
 		final SeekBar seek1 = (SeekBar) Viewlayout.findViewById(R.id.v_seekBar);
+		seek1.setProgress(bins_v);
 		if(mode > 0){
 		seek1.setMax(50);
 		}
 		seek1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
 				//Do something here with new value
-				item1.setText("Bins : " + progress);
+				item1.setText("Bins : " + (progress+1));
 			}
 
 			public void onStartTrackingTouch(SeekBar arg0) {
@@ -625,6 +651,7 @@ public class MainActivity extends FragmentActivity {
 						progressDialog.show();
 						new ImproveImageTask().execute(theImage);
 						Log.d("DEBUG", "V-TRANSFORMATION BINS = " + bins);
+						bins_v = seek1.getProgress();
 					}
 
 				});
@@ -652,6 +679,17 @@ public class MainActivity extends FragmentActivity {
 
 		//  seekBar1
 		final SeekBar seek1 = (SeekBar) Viewlayout.findViewById(R.id.aml_seekBar);
+
+		seek1.setProgress(gamma_aml);
+		double show = 0;
+		if(gamma_aml+1 <= 32) {
+			show = (double) (gamma_aml+1) / 32.0;
+		}
+		else{
+			show = (Math.round(((gamma_aml-29.0)/3.0)*100.0))/100.0;
+		}
+		item1.setText("gamma: " + show);
+
 		seek1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){
 				//Do something here with new value
@@ -660,9 +698,10 @@ public class MainActivity extends FragmentActivity {
 					show = (double) (progress+1) / 32.0;
 				}
 				else{
-					show = progress-31;
+					show = (Math.round(((progress-29.0)/3.0)*100.0))/100.0;
 				}
 				item1.setText("gamma: " + show);
+				//gamma_aml = progress;
 			}
 
 			public void onStartTrackingTouch(SeekBar arg0) {
@@ -689,7 +728,7 @@ public class MainActivity extends FragmentActivity {
 							gamma = (float) (gamma_i+1) / (float)32;
 						}
 						else{
-							gamma = gamma_i-31;
+							gamma = (float)(gamma_i-29.0)/(float)3.0;
 						}
 
 						gamma_i = (int)(gamma*100);
@@ -698,6 +737,7 @@ public class MainActivity extends FragmentActivity {
 						progressDialog.show();
 						new ImproveImageTask().execute(theImage);
 						Log.d("DEBUG", "V-TRANSFORMATION BINS = " + gamma_i);
+						gamma_aml = seek1.getProgress();
 					}
 
 				});

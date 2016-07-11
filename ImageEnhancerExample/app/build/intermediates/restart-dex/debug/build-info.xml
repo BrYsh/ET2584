@@ -4,34 +4,39 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="490222513002519"
+    timestamp="506913129599671"
     token="3664599508340427972"
     verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="102" />
+        duration="125" />
     <task
         name="instant-run-dex"
-        duration="599" />
+        duration="902" />
     <task
         name="instant-run-transform"
-        duration="14" />
+        duration="51" />
     <task
         name="verifier"
-        duration="1" />
+        duration="8" />
 
     <artifact
         location="/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/intermediates/reload-dex/debug/classes.dex"
         type="RELOAD_DEX" />
 
-    <build timestamp="490118377129326" >
+    <build timestamp="505233039852242" >
         <artifact
             location="/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
+    <build timestamp="506815278167067" >
+        <artifact
+            location="/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+            type="DEX" />
+    </build>
     <build
-        timestamp="490222513002519"
+        timestamp="506913129599671"
         verifier="COMPATIBLE" >
         <artifact
             location="/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/intermediates/reload-dex/debug/classes.dex"
