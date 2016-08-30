@@ -77,7 +77,7 @@ public class VEnhancer implements ImageEnhancer {
 
 		Log.d("DEBUG", "V-trans: hv = " + hv);
 
-		// Total intensitet i bilden
+		// Total intensitet i bilden (onödig)
 		int sum_intensity = 0;
 		for (int i = 0 ; i < hist_array.length; ++i ) {
 			sum_intensity += hist_array[i];
