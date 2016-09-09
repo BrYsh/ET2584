@@ -42,8 +42,22 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.851852">
+              <caret line="50" column="20" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="20" />
+              <folding>
+                <element signature="e#11635#11942#0" expanded="true" />
+                <element signature="e#11941#11942#0" expanded="true" />
+                <element signature="e#12387#12402#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageEnhancer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/ImageEnhancer.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="393" column="57" selection-start-line="393" selection-start-column="49" selection-end-line="393" selection-end-column="57" />
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -52,22 +66,27 @@
       <file leaf-file-name="HisteqEnhancer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/HisteqEnhancer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22083806">
-              <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.43157893">
+              <caret line="252" column="45" selection-start-line="252" selection-start-column="45" selection-end-line="252" selection-end-column="45" />
               <folding>
-                <element signature="e#3108#3109#0" expanded="true" />
-                <element signature="e#3151#3152#0" expanded="true" />
+                <element signature="e#2236#2620#0" expanded="true" />
+                <element signature="e#2619#2620#0" expanded="true" />
+                <element signature="e#2696#3082#0" expanded="true" />
+                <element signature="e#3081#3082#0" expanded="true" />
+                <element signature="e#3158#3545#0" expanded="true" />
+                <element signature="e#3544#3545#0" expanded="true" />
+                <element signature="e#3998#4242#0" expanded="true" />
+                <element signature="e#4241#4242#0" expanded="true" />
+                <element signature="e#4318#4564#0" expanded="true" />
+                <element signature="e#4563#4564#0" expanded="true" />
+                <element signature="e#4640#4887#0" expanded="true" />
+                <element signature="e#4886#4887#0" expanded="true" />
+                <element signature="e#5582#5583#0" expanded="true" />
+                <element signature="e#5659#5906#0" expanded="true" />
+                <element signature="e#5905#5906#0" expanded="true" />
+                <element signature="e#5982#6230#0" expanded="true" />
+                <element signature="e#6229#6230#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AMlevelsEnhancer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/AMlevelsEnhancer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1743,12 +1762,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/AMlevelsEnhancer.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/amlevels_dialog.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/AlevelsEnhancer.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/HisteqEnhancer.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/VEnhancer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/HisteqEnhancer.java" />
       </list>
     </option>
   </component>
@@ -1783,16 +1802,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="ImageEnhancerExample" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1888,8 +1905,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -1907,7 +1922,7 @@
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.New_IE">
+  <component name="RunManager" selected="Android Application.app">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -2227,7 +2242,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.388584" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -2236,7 +2251,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19758508" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2274,7 +2289,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#11635#11942#0" expanded="true" />
+            <element signature="e#11941#11942#0" expanded="true" />
+            <element signature="e#12387#12402#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#11635#11942#0" expanded="true" />
+            <element signature="e#11941#11942#0" expanded="true" />
+            <element signature="e#12387#12402#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2283,8 +2314,23 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="129" column="45" selection-start-line="129" selection-start-column="45" selection-end-line="129" selection-end-column="45" />
           <folding>
-            <element signature="e#3108#3109#0" expanded="true" />
-            <element signature="e#3151#3152#0" expanded="true" />
+            <element signature="e#2236#2620#0" expanded="true" />
+            <element signature="e#2619#2620#0" expanded="true" />
+            <element signature="e#2696#3082#0" expanded="true" />
+            <element signature="e#3081#3082#0" expanded="true" />
+            <element signature="e#3158#3545#0" expanded="true" />
+            <element signature="e#3544#3545#0" expanded="true" />
+            <element signature="e#3998#4242#0" expanded="true" />
+            <element signature="e#4241#4242#0" expanded="true" />
+            <element signature="e#4318#4564#0" expanded="true" />
+            <element signature="e#4563#4564#0" expanded="true" />
+            <element signature="e#4640#4887#0" expanded="true" />
+            <element signature="e#4886#4887#0" expanded="true" />
+            <element signature="e#5582#5583#0" expanded="true" />
+            <element signature="e#5659#5906#0" expanded="true" />
+            <element signature="e#5905#5906#0" expanded="true" />
+            <element signature="e#5982#6230#0" expanded="true" />
+            <element signature="e#6229#6230#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2353,7 +2399,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#11635#11942#0" expanded="true" />
+            <element signature="e#11941#11942#0" expanded="true" />
+            <element signature="e#12387#12402#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2362,8 +2412,23 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="129" column="45" selection-start-line="129" selection-start-column="45" selection-end-line="129" selection-end-column="45" />
           <folding>
-            <element signature="e#3108#3109#0" expanded="true" />
-            <element signature="e#3151#3152#0" expanded="true" />
+            <element signature="e#2236#2620#0" expanded="true" />
+            <element signature="e#2619#2620#0" expanded="true" />
+            <element signature="e#2696#3082#0" expanded="true" />
+            <element signature="e#3081#3082#0" expanded="true" />
+            <element signature="e#3158#3545#0" expanded="true" />
+            <element signature="e#3544#3545#0" expanded="true" />
+            <element signature="e#3998#4242#0" expanded="true" />
+            <element signature="e#4241#4242#0" expanded="true" />
+            <element signature="e#4318#4564#0" expanded="true" />
+            <element signature="e#4563#4564#0" expanded="true" />
+            <element signature="e#4640#4887#0" expanded="true" />
+            <element signature="e#4886#4887#0" expanded="true" />
+            <element signature="e#5582#5583#0" expanded="true" />
+            <element signature="e#5659#5906#0" expanded="true" />
+            <element signature="e#5905#5906#0" expanded="true" />
+            <element signature="e#5982#6230#0" expanded="true" />
+            <element signature="e#6229#6230#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2460,13 +2525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/ImageEnhancer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10291595">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/TestEnhancer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2556,10 +2614,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/AMlevelsEnhancer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="393" column="57" selection-start-line="393" selection-start-column="49" selection-end-line="393" selection-end-column="57" />
+          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/VEnhancer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="162" column="19" selection-start-line="162" selection-start-column="19" selection-end-line="162" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -2624,29 +2690,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/AMlevelsEnhancer.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/ImageEnhancer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="46" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/VEnhancer.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="162" column="19" selection-start-line="162" selection-start-column="19" selection-end-line="162" selection-end-column="19" />
-          <folding />
+        <state vertical-scroll-proportion="-6.851852">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="20" />
+          <folding>
+            <element signature="e#11635#11942#0" expanded="true" />
+            <element signature="e#11941#11942#0" expanded="true" />
+            <element signature="e#12387#12402#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/softa/imageenhancer/HisteqEnhancer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22083806">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.43157893">
+          <caret line="252" column="45" selection-start-line="252" selection-start-column="45" selection-end-line="252" selection-end-column="45" />
           <folding>
-            <element signature="e#3108#3109#0" expanded="true" />
-            <element signature="e#3151#3152#0" expanded="true" />
+            <element signature="e#2236#2620#0" expanded="true" />
+            <element signature="e#2619#2620#0" expanded="true" />
+            <element signature="e#2696#3082#0" expanded="true" />
+            <element signature="e#3081#3082#0" expanded="true" />
+            <element signature="e#3158#3545#0" expanded="true" />
+            <element signature="e#3544#3545#0" expanded="true" />
+            <element signature="e#3998#4242#0" expanded="true" />
+            <element signature="e#4241#4242#0" expanded="true" />
+            <element signature="e#4318#4564#0" expanded="true" />
+            <element signature="e#4563#4564#0" expanded="true" />
+            <element signature="e#4640#4887#0" expanded="true" />
+            <element signature="e#4886#4887#0" expanded="true" />
+            <element signature="e#5582#5583#0" expanded="true" />
+            <element signature="e#5659#5906#0" expanded="true" />
+            <element signature="e#5905#5906#0" expanded="true" />
+            <element signature="e#5982#6230#0" expanded="true" />
+            <element signature="e#6229#6230#0" expanded="true" />
           </folding>
         </state>
       </provider>

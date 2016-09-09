@@ -1,0 +1,8 @@
+CHANGED,/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/softa/imageenhancer/HisteqEnhancer$3$override.class
+CHANGED,/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/softa/imageenhancer/HisteqEnhancer$4$override.class
+CHANGED,/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/softa/imageenhancer/HisteqEnhancer$2$override.class
+CHANGED,/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/softa/imageenhancer/HisteqEnhancer$1$override.class
+CHANGED,/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/softa/imageenhancer/HisteqEnhancer$override.class
+CHANGED,/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/softa/imageenhancer/HisteqEnhancer$5$override.class
+CHANGED,/Users/Andreas/Skola/ET2584_sommar_bild/Andoid/ET2584/ImageEnhancerExample/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/softa/imageenhancer/HisteqEnhancer$6$override.class
